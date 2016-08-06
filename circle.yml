@@ -1,0 +1,8 @@
+machine:
+  java:
+    version: openjdk8
+
+
+test:
+  post:
+    - sbt clean coverage test coverageReport coverageAggregate codacyCoverage
