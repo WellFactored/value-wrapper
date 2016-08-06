@@ -2,7 +2,10 @@ package com.wellfactored.valuewrapper
 
 import org.scalatest.{Matchers, WordSpecLike}
 
-class ValidatorTest extends WordSpecLike with Matchers with TestValidators with ValueWrapperGen {
+class ValidatorTest extends WordSpecLike with Matchers with TestValidators {
+
+  import ValueWrapperGen._
+
   "An implicitly summoned ValueWrapper for LongWrapper" should {
     "wrap -1 without validation" in {
       val wrapper = implicitly[ValueWrapper[LongWrapper, Long]]

@@ -35,3 +35,9 @@ trait ValueWrapperGen {
       gen.value.to(w).head
   }
 }
+
+/**
+  * Import `ValueWrapperGen._` in cases where you can't or don't want to extend the
+  * `ValueWrapperGen` trait yourself.
+  */
+object ValueWrapperGen extends ValueWrapperGen
