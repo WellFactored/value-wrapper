@@ -14,9 +14,9 @@ pomIncludeRepository in ThisBuild := { _ => false }
 
 licenses in ThisBuild := Seq("MIT" -> url("https://opensource.org/licenses/MIT"))
 
-homepage in ThisBuild := Some(url(s"https://github.com/wellfactored/$name"))
+homepage in ThisBuild := Some(url(s"https://github.com/wellfactored/${name.value}"))
 
-scmInfo in ThisBuild := Some(ScmInfo(url(s"http://github.com/wellfactored/$name"), s"scm:git@github.com:wellfactored/$name.git"))
+scmInfo in ThisBuild := Some(ScmInfo(url(s"http://github.com/wellfactored/${name.value}"), s"scm:git@github.com:wellfactored/${name.value}.git"))
 
 pomExtra in ThisBuild :=
   <developers>
