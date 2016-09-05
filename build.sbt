@@ -1,4 +1,3 @@
-
 name := "value-wrapper"
 
 organization := "com.wellfactored"
@@ -14,7 +13,7 @@ git.useGitDescribe in ThisBuild := true
 
 libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % "2.3.1",
-  "org.typelevel" %% "cats-core" % "0.6.1",
+  "org.typelevel" %% "cats-core" % "0.7.0",
 
   "org.scalatest" %% "scalatest" % "3.0.0" % Test
 )
