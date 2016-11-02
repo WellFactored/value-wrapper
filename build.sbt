@@ -15,7 +15,7 @@ git.useGitDescribe in ThisBuild := true
 
 libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % "2.3.2",
-  "org.typelevel" %% "cats-core" % "0.7.2",
+  "org.typelevel" %% "cats-core" % "0.8.0",
   compilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full),
 
   "org.scalatest" %% "scalatest" % "3.0.0" % Test
