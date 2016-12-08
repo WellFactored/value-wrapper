@@ -1,6 +1,6 @@
 package com.wellfactored.valuewrapper
 
-import shapeless.{::, Generic, HNil}
+import shapeless.{::, Generic, HNil, Lazy}
 
 /**
   * This trait provides an implicit function that will generate a ValueWrapper[W,V]
@@ -27,15 +27,15 @@ trait ValueWrapperGen {
     */
   implicit def genWV[W, V](
                             implicit
-                            gen: Generic.Aux[W, V :: HNil],
+                            gen: Lazy[Generic.Aux[W, V :: HNil]],
                             vl: Validator[W, V]
                           ): ValueWrapper[W, V] =
     new ValueWrapper[W, V] {
       override def wrap(v: V): Either[String, W] =
-        vl.validate(v).map(v2 => gen.from(v2 :: HNil)).toEither
+        vl.validate(v).map(v2 => gen.value.from(v2 :: HNil)).toEither
 
       override def unwrap(w: W): V =
-        gen.to(w).head
+        gen.value.to(w).head
     }
 }
 
