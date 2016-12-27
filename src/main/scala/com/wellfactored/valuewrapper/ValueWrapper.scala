@@ -23,4 +23,3 @@ trait ValueWrapper[W, V] {
     */
   def unwrap(w: W): V
 }
-
