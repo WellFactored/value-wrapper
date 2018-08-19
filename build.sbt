@@ -2,7 +2,7 @@ name := "value-wrapper"
 
 organization := "com.wellfactored"
 
-crossScalaVersions := Seq("2.10.6", "2.11.8", "2.12.1")
+crossScalaVersions := Seq("2.11.8", "2.12.1")
 
 scalaVersion := "2.11.8"
 
